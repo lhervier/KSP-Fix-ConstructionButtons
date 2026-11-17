@@ -1,4 +1,5 @@
 using System;
+using System.Reflection;
 using HarmonyLib;
 using UnityEngine;
 
@@ -16,7 +17,9 @@ namespace com.github.lhervier.ksp.fix.constructionbuttons
         private void Start()
         {
             Settings.Load();
-            Log.Info($"Version {typeof(KSPFixConstructionButtons).Assembly.GetName().Version}, " +
+            string version = typeof(KSPFixConstructionButtons).Assembly
+                .GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion;
+            Log.Info($"Version {version}, " +
                 $"snapIcon {Settings.SnapIcon}, coordSpaceLabel {Settings.CoordSpaceLabel}, log level {Log.Level}");
             Harmony harmony = new Harmony(HarmonyId);
             if (Settings.SnapIcon)
