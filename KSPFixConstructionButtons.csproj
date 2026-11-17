@@ -3,7 +3,7 @@
     <TargetFramework>net472</TargetFramework>
     <AssemblyName>KSPFixConstructionButtons</AssemblyName>
     <RootNamespace>com.github.lhervier.ksp.fix.constructionbuttons</RootNamespace>
-    <Version>0.1.0</Version>
+    <Version>0.1.0-dev</Version>
     <Description>Makes the snap and coordinate space buttons of the EVA construction mode show the mode actually in use</Description>
     <!-- Straight into the folder that gets copied to the GameData of KSP. -->
     <OutputPath>GameData\KSPFixConstructionButtons</OutputPath>
